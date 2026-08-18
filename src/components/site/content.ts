@@ -2,7 +2,7 @@
 
 export const benefits = [
   { icon: "bi-cash-coin", title: "Guaranteed Monthly Rent", text: "Fixed rent paid on the same date every month, whether the property is occupied or not." },
-  { icon: "bi-handshake", title: "Long-Term Partnership", text: "Agreements from 3 to 5 years, giving landlords stability and predictable income." },
+  { icon: "bi-link-45deg", title: "Long-Term Partnership", text: "Agreements from 3 to 5 years, giving landlords stability and predictable income." },
   { icon: "bi-person-badge", title: "Professional Occupants", text: "Vetted corporate guests, relocating professionals and contractors — referenced and insured." },
   { icon: "bi-clipboard-check", title: "Routine Inspections", text: "Documented inspections with photographic reports shared directly with you." },
   { icon: "bi-gear-wide-connected", title: "Fully Managed", text: "Lettings, compliance, cleaning and maintenance handled end to end by our in-house team." },
