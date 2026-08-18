@@ -342,3 +342,12 @@ p { line-height: 1.75; }
   .btn:hover, .card-premium:hover { transform: none; }
 }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+/* Tailwind ships a `.collapse { visibility: collapse }` utility that clashes
+   with Bootstrap's collapse component — restore Bootstrap's behaviour. */
+.collapse.navbar-collapse,
+.accordion-collapse.collapse { visibility: visible; }
+
+a { color: var(--navy); }
+a:hover { color: var(--gold); }
+.footer a, .btn, .nav-link, .social-dot { color: inherit; }
