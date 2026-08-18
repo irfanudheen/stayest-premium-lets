@@ -362,3 +362,4 @@ a:hover { color: var(--gold); }
   .site-nav .nav-link { font-size: .9rem; padding: .5rem .8rem !important; }
   .site-nav .brand-sub { display: block; }
 }
+.site-nav .btn { white-space: nowrap; }
