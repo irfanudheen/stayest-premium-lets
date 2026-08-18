@@ -346,7 +346,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 /* Tailwind ships a `.collapse { visibility: collapse }` utility that clashes
    with Bootstrap's collapse component — restore Bootstrap's behaviour. */
 .collapse.navbar-collapse,
-.accordion-collapse.collapse { visibility: visible; }
+.accordion-collapse.collapse { visibility: visible !important; }
 
 a { color: var(--navy); }
 a:hover { color: var(--gold); }
