@@ -67,7 +67,7 @@ export function Navbar() {
               <li className="nav-item" key={l.label}>
                 <Link
                   to={l.to}
-                  hash={l.hash}
+                  {...(l.hash ? { hash: l.hash } : {})}
                   className="nav-link"
                   activeOptions={{ exact: true, includeHash: false }}
                   activeProps={l.hash ? {} : { className: "nav-link active" }}
