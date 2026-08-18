@@ -10,33 +10,128 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AreasCoveredRouteImport } from './routes/areas-covered'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as CompanyLetRouteImport } from './routes/company-let'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as GuaranteedRentRouteImport } from './routes/guaranteed-rent'
+import { Route as ServicesRouteImport } from './routes/services'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AreasCoveredRoute = AreasCoveredRouteImport.update({
+  id: '/areas-covered',
+  path: '/areas-covered',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyLetRoute = CompanyLetRouteImport.update({
+  id: '/company-let',
+  path: '/company-let',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuaranteedRentRoute = GuaranteedRentRouteImport.update({
+  id: '/guaranteed-rent',
+  path: '/guaranteed-rent',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/areas-covered': typeof AreasCoveredRoute
+  '/blog': typeof BlogRoute
+  '/company-let': typeof CompanyLetRoute
+  '/contact': typeof ContactRoute
+  '/guaranteed-rent': typeof GuaranteedRentRoute
+  '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/areas-covered': typeof AreasCoveredRoute
+  '/blog': typeof BlogRoute
+  '/company-let': typeof CompanyLetRoute
+  '/contact': typeof ContactRoute
+  '/guaranteed-rent': typeof GuaranteedRentRoute
+  '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/areas-covered': typeof AreasCoveredRoute
+  '/blog': typeof BlogRoute
+  '/company-let': typeof CompanyLetRoute
+  '/contact': typeof ContactRoute
+  '/guaranteed-rent': typeof GuaranteedRentRoute
+  '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/areas-covered'
+    | '/blog'
+    | '/company-let'
+    | '/contact'
+    | '/guaranteed-rent'
+    | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/areas-covered'
+    | '/blog'
+    | '/company-let'
+    | '/contact'
+    | '/guaranteed-rent'
+    | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/areas-covered'
+    | '/blog'
+    | '/company-let'
+    | '/contact'
+    | '/guaranteed-rent'
+    | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AreasCoveredRoute: typeof AreasCoveredRoute
+  BlogRoute: typeof BlogRoute
+  CompanyLetRoute: typeof CompanyLetRoute
+  ContactRoute: typeof ContactRoute
+  GuaranteedRentRoute: typeof GuaranteedRentRoute
+  ServicesRoute: typeof ServicesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +143,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/areas-covered': {
+      id: '/areas-covered'
+      path: '/areas-covered'
+      fullPath: '/areas-covered'
+      preLoaderRoute: typeof AreasCoveredRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company-let': {
+      id: '/company-let'
+      path: '/company-let'
+      fullPath: '/company-let'
+      preLoaderRoute: typeof CompanyLetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guaranteed-rent': {
+      id: '/guaranteed-rent'
+      path: '/guaranteed-rent'
+      fullPath: '/guaranteed-rent'
+      preLoaderRoute: typeof GuaranteedRentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AreasCoveredRoute: AreasCoveredRoute,
+  BlogRoute: BlogRoute,
+  CompanyLetRoute: CompanyLetRoute,
+  ContactRoute: ContactRoute,
+  GuaranteedRentRoute: GuaranteedRentRoute,
+  ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
