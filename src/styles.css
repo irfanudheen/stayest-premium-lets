@@ -351,3 +351,14 @@ html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 a { color: var(--navy); }
 a:hover { color: var(--gold); }
 .footer a, .btn, .nav-link, .social-dot { color: inherit; }
+
+/* Keep the primary nav on a single line */
+.site-nav .nav-link { white-space: nowrap; }
+@media (min-width: 1200px) {
+  .site-nav .nav-link { font-size: .86rem; padding: .5rem .55rem !important; }
+  .site-nav .brand-sub { display: none; }
+}
+@media (min-width: 1500px) {
+  .site-nav .nav-link { font-size: .9rem; padding: .5rem .8rem !important; }
+  .site-nav .brand-sub { display: block; }
+}
