@@ -77,16 +77,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "STAYEST | Guaranteed Rent & Company Let Management UK" },
+      {
+        name: "description",
+        content:
+          "STAYEST provides UK landlords with guaranteed monthly rent, company let agreements and fully managed property services.",
+      },
+      { name: "author", content: "STAYEST" },
+      { name: "theme-color", content: "#0F2747" },
+      { property: "og:site_name", content: "STAYEST" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
